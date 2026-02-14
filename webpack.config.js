@@ -1,10 +1,10 @@
 const path = require("node:path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
     index: "./src/index.js",
-    page1: "./src/page1.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -17,6 +17,13 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "img/[name][ext]",
+        },
+      },
     ],
   },
   plugins: [
@@ -25,10 +32,8 @@ module.exports = {
       template: "./src/index.html",
       chunks: ["index"],
     }),
-    new HtmlWebpackPlugin({
-      filename: "page1.html",
-      template: "./src/page1.html",
-      chunks: ["page1"],
+    new CopyWebpackPlugin({
+      patterns: [{ from: "src/img", to: "img" }],
     }),
   ],
   mode: "development",
