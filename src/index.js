@@ -4,6 +4,7 @@ import "./index.css";
 const app = document.createElement("div");
 app.id = "app-view";
 document.body.appendChild(app);
+import demoImg from "./img/demo.jpg";
 
 function renderHome() {
   app.innerHTML = `
@@ -13,7 +14,7 @@ function renderHome() {
       <button id="goto-page1">跳转到 Page1</button>
     </div>
     <div>
-      <img src="./img/demo.jpg" alt="" />
+      <img src="${demoImg}" alt="" />
     </div>
   `;
   document.getElementById("btn").onclick = () => {
