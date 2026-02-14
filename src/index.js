@@ -8,7 +8,7 @@ import demoImg from "./img/demo.jpg";
 
 function renderHome() {
   app.innerHTML = `
-    <h1>你好，世界</h1>
+    <h1>你好，世界~</h1>
     <button id="btn">点我</button>
     <div style="margin: 20px 0">
       <button id="goto-page1">跳转到 Page1</button>
