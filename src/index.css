@@ -15,3 +15,10 @@ button {
   color: #2a7ae2;
   cursor: pointer;
 }
+/* page1样式 */
+h2 {
+  color: #1976d2;
+}
+body.page1 {
+  background: #e3f2fd;
+}
