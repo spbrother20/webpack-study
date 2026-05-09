@@ -27,6 +27,7 @@
   },
   "homepage": "https://spbrother20.github.io/webpack-study/",
   "dependencies": {
+    "antd": "^6.3.7",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   }

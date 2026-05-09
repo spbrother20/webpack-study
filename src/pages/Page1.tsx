@@ -1,9 +1,8 @@
 import MyBtn from "../components/MyBtn";
-
 const Page1 = ({ goHome }: { goHome: () => void }) => {
   return (
     <div>
-      <h1>页面1</h1>
+      <h1>Page1</h1>
       <div>
         <button onClick={goHome}>返回首页</button>
       </div>
