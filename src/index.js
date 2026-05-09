@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import demoImg from "./img/demo.jpg";
-
+import { Page1 } from "./pages/Page1";
 function Home({ goToPage1 }) {
   return (
     <div>
@@ -21,16 +21,6 @@ function Home({ goToPage1 }) {
       <div>
         <img src={demoImg} alt="" />
       </div>
-    </div>
-  );
-}
-
-function Page1({ goHome }) {
-  return (
-    <div>
-      <h1>页面1</h1>
-      <h2>Page 1 JS 加载成功</h2>
-      <button onClick={goHome}>返回首页</button>
     </div>
   );
 }
