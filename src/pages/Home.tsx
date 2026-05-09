@@ -1,11 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import demoImg from "../img/demo.jpg";
+import { Button } from "antd";
 
-const Home = ({ goToPage1 }: { goToPage1: () => void }) => {
+const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <h1>你好，世界~</h1>
       <div>
-        <button onClick={goToPage1}>跳转到 Page1</button>
+        <Button type="link" onClick={() => navigate("/page1")}>
+          去Page1
+        </Button>
+        <Button type="link" onClick={() => navigate("/page2")}>
+          去Page2
+        </Button>
       </div>
       <button
         onClick={() => {
@@ -13,7 +21,7 @@ const Home = ({ goToPage1 }: { goToPage1: () => void }) => {
           console.log("clicked");
         }}
       >
-        点我
+        弹窗按钮
       </button>
       <div>
         <img src={demoImg} alt="" />

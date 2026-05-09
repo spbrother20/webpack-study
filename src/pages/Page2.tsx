@@ -1,11 +1,13 @@
-import { Tabs } from "antd";
+import { Button, Tabs } from "antd";
 import type { TabsProps } from "antd";
 const Page2 = ({ goHome }: { goHome: () => void }) => {
   return (
     <div>
       <h1>Page2</h1>
       <div>
-        <button onClick={goHome}>返回首页</button>
+        <Button type="link" onClick={goHome}>
+          去首页
+        </Button>
       </div>
       <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
     </div>
