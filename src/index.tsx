@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import demoImg from "./img/demo.jpg";
 import { Page1 } from "./pages/Page1";
-function Home({ goToPage1 }) {
+
+function Home({ goToPage1 }: { goToPage1: () => void }) {
   return (
     <div>
       <h1>你好，世界~</h1>
@@ -34,5 +35,5 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(<App />);

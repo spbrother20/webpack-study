@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Page1 = ({ goHome }) => {
+export function Page1({ goHome }: { goHome: () => void }) {
   return (
     <div>
       <h1>页面1</h1>
@@ -8,4 +8,4 @@ export const Page1 = ({ goHome }) => {
       <button onClick={goHome}>返回首页</button>
     </div>
   );
-};
+}
