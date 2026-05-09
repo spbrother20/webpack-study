@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate, BrowserRouter } from "react-router-dom";
+import { Routes, Route, useNavigate, HashRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Page1 from "./pages/Page1";
@@ -21,7 +21,7 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>,
+  </HashRouter>,
 );
