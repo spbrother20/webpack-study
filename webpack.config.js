@@ -17,25 +17,9 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-env", "@babel/preset-react"],
-            },
-          },
-          {
             loader: "ts-loader",
           },
         ],
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
       },
       {
         test: /\.css$/,
@@ -58,4 +42,7 @@ module.exports = {
     }),
   ],
   mode: "development",
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", ".jsx"],
+  },
 };

@@ -1,6 +1,4 @@
-import React from "react";
-
-export function Page1({ goHome }: { goHome: () => void }) {
+const Page1 = ({ goHome }: { goHome: () => void }) => {
   return (
     <div>
       <h1>页面1</h1>
@@ -8,4 +6,6 @@ export function Page1({ goHome }: { goHome: () => void }) {
       <button onClick={goHome}>返回首页</button>
     </div>
   );
-}
+};
+
+export default Page1;

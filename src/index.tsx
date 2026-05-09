@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import demoImg from "./img/demo.jpg";
-import { Page1 } from "./pages/Page1";
+import Page1 from "./pages/Page1";
 
 function Home({ goToPage1 }: { goToPage1: () => void }) {
   return (
