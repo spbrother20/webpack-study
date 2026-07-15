@@ -2,16 +2,25 @@ const path = require("node:path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  // mode: "production",//这个是压缩版本
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: {
     index: "./src/index.tsx",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
-    clean: true,
+    clean: true, //每次构建前自动清空上一次的目录
+  },
+  devServer: {
+    static: "./dist",
+    open: true,
+    hot: true,
   },
   module: {
+    //打包规则
     rules: [
+      //use里写loader
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
@@ -34,6 +43,7 @@ module.exports = {
       },
     ],
   },
+  //插件
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
@@ -41,7 +51,6 @@ module.exports = {
       chunks: ["index"],
     }),
   ],
-  mode: "development",
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
