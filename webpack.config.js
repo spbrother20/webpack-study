@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"], //css-loader是将多个css打包为一个，而style-loader是将打包好的那个挂到head上
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
